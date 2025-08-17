@@ -1,4 +1,4 @@
-# Atividade para a disciplina PROGRAMAÇÃO WEB II do Instituto Federal Catarinense - Campus Fraiburgo.
+# Atividade para a disciplina PROGRAMAÇÃO WEB II do Instituto Federal Catarinense - Campus Fraiburgo (17/08/2025).
 
 ## Requisitos para realizar o projeto:
 
