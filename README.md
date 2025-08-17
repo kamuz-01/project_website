@@ -9,24 +9,29 @@
 ## Sequencia para criar o projeto
 
 ### Criar o ambiente virtual
-
-* python -m venv venv
+```
+python -m venv venv
+```
 
 ### Ativar o ambiente virtual no windows
-
-* venv\Scripts\Activate
+```
+venv\Scripts\Activate
+```
 
 ### Com o venv ativado, instalar o Django
-
-* pip install Django
+```
+pip install Django
+```
 
 ### Criar o projeto com Django
-
+```
 django-admin startproject project_website .
+```
 
 ### Criar app pagina_inicial
-
-* python manage.py startapp website
+```
+python manage.py startapp website
+```
 
 ### Configurar o projeto (views e rotas)
 
@@ -42,14 +47,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
 ]
-
 ```
 
 #### Mais abaixo, em project_website/settings.py, adicionar a seguinte linha:
 
 ```
 STATICFILES_DIRS = [BASE_DIR / 'static']
-
 ```
 
 #### Crie as views em project_website/website/views.py
@@ -69,7 +72,6 @@ def sobre(request):
 
 def contato(request):
     return render(request, 'website/contato.html')
-
 ```
 
 ### Crie urls.py em project_website/website/
@@ -96,7 +98,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('website.urls')), # redireciona para o app website
 ]
-
 ```
 
 ### Criar as paginas html em project_website\website\templates\website; que neste caso foram as seguintes:
@@ -125,5 +126,4 @@ python manage.py runserver
 Acessar as páginas criadas com Django.
 ```
 http://127.0.0.1:8000/
-
 ```
