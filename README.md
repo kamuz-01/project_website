@@ -1,4 +1,6 @@
-# Requisitos
+# Atividade para a disciplina PROGRAMAÇÃO WEB II do Instituto Federal Catarinense - Campus Fraiburgo.
+
+## Requisitos para realizar o projeto:
 
 * Python 3 ou superior - Conferir a versão: python --version
 * Django 5 ou superior - Conferir a versão: django-admin --version
@@ -8,37 +10,23 @@
 
 ### Criar o ambiente virtual
 
-´´´
-
-python -m venv venv
-
-´´´
+* python -m venv venv
 
 ### Ativar o ambiente virtual no windows
 
-´´´
-venv\Scripts\Activate
-
-´´´
+* venv\Scripts\Activate
 
 ### Com o venv ativado, instalar o Django
 
-´´´
-pip install Django
-
-´´´
+* pip install Django
 
 ### Criar o projeto com Django
 
-´´´
 django-admin startproject project_website .
-´´´
 
 ### Criar app pagina_inicial
 
-´´´
-python manage.py startapp website
-´´´
+* python manage.py startapp website
 
 ### Configurar o projeto (views e rotas)
 
