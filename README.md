@@ -9,7 +9,9 @@
 ### Criar o ambiente virtual
 
 ´´´
+
 python -m venv venv
+
 ´´´
 
 ### Ativar o ambiente virtual no windows
