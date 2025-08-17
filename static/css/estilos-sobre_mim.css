@@ -1,0 +1,284 @@
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.interface {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00FF08;
+	color: #fff;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover,
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #00ff08;
+    transform: scale(1.05);
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    padding: 40px 10%;
+    position: relative;
+	top: 0;
+	z-index: 1000;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+	padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;	
+	background-color: #00FF08;
+    color: #fff;
+    box-shadow: 0px 0px 8px #00ff08;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.logo{
+  max-width: 100%;
+  height: auto;
+  max-height: 80px;
+  padding-top: 3px;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+/* ESTILO DO MENU MOBILE */
+@media (max-width: 1118px) {
+  #btn-mobile {
+    display: flex; /*Para dar visibilidade em telas menores*/
+    padding: 0.5rem 0.13rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    color: white;
+    font-weight: bolder;
+  }
+  
+  .btn-contato{
+  	display: none;
+  }
+
+  #menu {
+    display: none; /* Oculta o menu até que o botão seja clicado */
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    right: 0px;
+    background-color: #161616;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+ 
+  .opcoes{
+  	text-align: center;
+  }
+
+  #nav.active #menu {
+    display: block;
+    height: calc(100vh - 120px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    width: calc(100% - 15px);
+    gap: 0.5rem;
+  }
+
+  #hamburger {
+    border-top: 2px solid;
+    width: 25px;
+    margin-top: 3px;
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+  
+  header nav.menu-desktop ul li {
+  	text-align: center;
+  	display: block;
+  	padding: 0 0px;
+  }
+  
+  .logo{
+  	padding-top: 0px;
+  	height: 50px;
+  	max-height: 50px;
+  	
+  }
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+.imagem-pessoal{
+	width: 440px;
+	height: 440px;
+	border-radius: 5px;
+}
+
+/* ESTILO DO SOBRE */
+section.sobre {
+    padding: 37px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre {
+    color: #fff;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #00FF08;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn-social h3 {
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00FF08;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* layout para telas menores */
+@media (max-width: 884px) {
+    .flex {
+        flex-direction: column; /* empilha verticalmente */
+    }
+
+    .imagem-pessoal {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .txt-sobre h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .txt-sobre p {
+        text-align: justify;
+    }
+}
