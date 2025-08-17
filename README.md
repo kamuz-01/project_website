@@ -16,12 +16,14 @@ python -m venv venv
 
 ´´´
 venv\Scripts\Activate
+
 ´´´
 
 ### Com o venv ativado, instalar o Django
 
 ´´´
 pip install Django
+
 ´´´
 
 ### Criar o projeto com Django
